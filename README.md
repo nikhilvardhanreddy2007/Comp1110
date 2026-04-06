@@ -7,12 +7,14 @@ set budget limits per category, and get alerts when they are overspending.
 
 ## How to run
 Make sure you have Python 3 installed, then run:
-    python main.py 
+    python -m pip install -r requirements.txt
+    python interface.py
 
 ## File Overview
 | File                | Author              | Purpose                              |
 |---------------------|---------------------|--------------------------------------|
 | datamodels.py       | Ekaterina Anufrieva | Data models and file I/O             |
+| interface.py        | Insung Cho          | Text-based interface and UI flow     |
 | (more files TBA as groupmates complete their parts)                      |
 
 ## Data File Formats
@@ -54,3 +56,6 @@ To test the data model and file I/O independently, run:
 
 This will create sample transactions.csv and budget_rules.csv files in your
 current folder and print the loaded results to the terminal.
+
+To run the text-based interface, use:
+    python interface.py
