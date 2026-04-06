@@ -7,10 +7,12 @@ set budget limits per category, and get alerts when they are overspending.
 
 ## How to run
 Make sure you have Python 3 installed, then run:
-    ```bash
-    python -m pip install -r requirements.txt 
-    python interface.py
-    ```
+```bash
+python -m pip install -r requirements.txt
+```
+```bash
+python interface.py
+```
 
 ## File Overview
 | File                | Author              | Purpose                              |
