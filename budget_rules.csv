@@ -1,4 +1,0 @@
-category,limit_amount,period,alert
-Food,2000.0,monthly,warn
-Transport,500.0,weekly,exceed
-All,10000.0,monthly,warn
