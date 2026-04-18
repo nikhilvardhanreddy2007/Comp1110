@@ -864,7 +864,7 @@ class BudgetApp(App):
         )
         self.refresh_transaction_table()
     def action_goals(self):
-        self.target = load_goal_target(TARGET_FILE)
+        self.target = load_goal_target(TARGET_FILE_FILE)
         self.push_screen(GoalScreen(self.savings, self.target))
     
     def action_alerts(self):
