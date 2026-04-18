@@ -1,0 +1,7 @@
+category,limit_amount,period,alert
+Subscriptions,223.25,weekly,exceed
+Other,7176.0,yearly,warn
+Shopping,2007.0,monthly,velocity
+Utilities,883.0,monthly,exceed
+Transport,18600.0,yearly,warn
+All,38900.0,Monthly,Warn

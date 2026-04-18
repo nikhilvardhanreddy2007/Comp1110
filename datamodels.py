@@ -5,8 +5,7 @@
 
 import csv
 import os
-from datetime import datetime
-
+from datetime import datetime, timedelta
 #Section 1: Category List 
 
 CATEGORIES = [
@@ -22,6 +21,17 @@ CATEGORIES = [
 ] 
 
 #Section 2: Data Models 
+class Goal:
+    def __init__(self, name, target_amount, current_saved=0.0):
+        self.name = name
+        self.target_amount = float(target_amount)
+        self.current_saved = float(current_saved)
+
+    def progress_percent(self):
+        if self.target_amount <= 0: return 0
+        return min(100, (self.current_saved / self.target_amount) * 100)
+    
+    
 class Transaction: #Represents a single transaction
     def __init__(self, date, amount, category, description, notes=""): #this function is called when we create a new Transaction object
         self.date = date #str: format: YYYY-MM-DD
@@ -72,6 +82,38 @@ class BudgetRule: #Represents a budget rule for a specific category and time per
             period=data["period"],
             alert=data["alert"]
         )
+    
+class GoalRecord:
+    def __init__(self, date, amount, description):
+        self.date = date  # str: YYYY-MM-DD
+        self.amount = float(amount)
+        self.description = description
+
+    def to_dict(self):
+        return {"date": self.date, "amount": self.amount, "description": self.description}
+
+def save_goal_target(target,filename):
+    with open(filename, "w") as f:
+        f.write(str(target))
+
+def load_goal_target(filename):
+    try:
+        with open(filename, "r", newline="", encoding="utf-8") as f:
+            # Assume target file has one line with the numeric value
+            reader = f.readlines()
+            if not reader:
+                return 0.0
+            return float(reader[0].strip())
+    except (ValueError, IndexError):
+        # Handle non-numeric values or empty file
+        return 0.0
+# Add a specific save function for savings
+def save_savings(records, filename="savings.csv"):
+    with open(filename, "w", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=["date", "amount", "description"])
+        writer.writeheader()
+        for r in records:
+            writer.writerow(r.to_dict())
 
 #Section3: File I/O - Transactions
 def save_transactions(transactions, filename="transactions.csv"): #Saves a list of Transaction objects to a CSV file
@@ -162,7 +204,7 @@ def load_budget_rules(filename="budget_rules.csv"): #Loads budget rules from a C
                     raise ValueError("Limit amount must be more than zero.")
                 
                 alert = row["alert"].strip().lower()
-                if alert not in ["warn", "exceed"]:
+                if alert not in ["warn", "exceed", "velocity"]:
                     raise ValueError(f"Invalid alert value '{alert}'. Must be 'warn' or 'exceed'.")
                 
                 rules.append(BudgetRule(category, limit_amount, period, alert))
@@ -172,8 +214,30 @@ def load_budget_rules(filename="budget_rules.csv"): #Loads budget rules from a C
 
     print(f"[Info] Loaded {len(rules)} budget rules from {filename}.")
     return rules
+def get_spending_for_past_days(transactions, category, days):
+    cutoff_date = datetime.now() - timedelta(days=days)
+    total = sum(t.amount for t in transactions if datetime.strptime(t.date, "%Y-%m-%d") >= cutoff_date and t.category == category)
+    return total
 
-#Section 5: Test Blocks (to test the code in this file, can be removed later)
+#Section 5: File I/O - Goal Records
+def load_savings(filename="goals.csv"):
+    records = []
+    if not os.path.exists(filename):
+        return records
+    with open(filename, "r") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            records.append(GoalRecord(row['date'], float(row['amount']), row['description']))
+    return records
+
+def save_savings(records, filename):
+    with open(filename, "w", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=["date", "amount", "description"])
+        writer.writeheader()
+        for r in records:
+            writer.writerow({"date": r.date, "amount": r.amount, "description": r.description})
+
+#Section 6: Test Blocks (to test the code in this file, can be removed later)
 if __name__ == "__main__":
     #Test saving and loading transactions
     test_transactions = [
