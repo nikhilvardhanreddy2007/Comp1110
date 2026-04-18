@@ -104,7 +104,7 @@ def load_goal_target(filename):
             if not reader:
                 return 0.0
             return float(reader[0].strip())
-    except (ValueError, IndexError):
+    except (ValueError, IndexError, FileNotFoundError):
         # Handle non-numeric values or empty file
         return 0.0
 # Add a specific save function for savings
