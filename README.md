@@ -19,6 +19,7 @@ python interface.py
 |---------------------|---------------------|--------------------------------------|
 | datamodels.py       | Ekaterina Anufrieva | Data models and file I/O             |
 | interface.py        | Insung Cho          | Text-based interface and UI flow     |
+| testdatagenerator.py| Hongyi Wang         | Test Data Generator                  |
 | (more files TBA as groupmates complete their parts)                      |
 
 ## Data File Formats
@@ -54,6 +55,35 @@ Food,2000.0,monthly,warn
 Transport,500.0,weekly,exceed
 All,10000.0,monthly,warn
 
+### savings.csv
+Stores savings records (deposits toward goals, with date and description).
+Managed by GoalRecord class in datamodels.py.
+
+Columns:
+date : Date of savings deposit, format YYYY-MM-DD
+amount : Amount saved in HKD (positive number)
+description : Short note about this savings entry
+Example:
+date,amount,description
+2024-06-01,500.0,Monthly savings deposit
+2024-06-15,300.0,Bonus added to savings
+
+### target.csv
+Stores the overall savings target amount (single numeric value).
+Used by Goal class to calculate progress percentage.
+
+Content example (one line only):
+10000.0
+
+**Features Implemented in datamodels.py**
+* Data models: Transaction, BudgetRule, Goal, GoalRecord
+* Save/load transactions to/from transactions.csv with validation
+* Save/load budget rules to/from budget_rules.csv with validation
+* Save/load savings records to/from savings.csv
+* Save/load savings target to/from target.csv
+* Spending calculation for past N days
+* Data validation: date format, positive amounts, valid categories
+
 ## Running the Tests
 To test the data model and file I/O independently, run:
     python datamodels.py
@@ -63,3 +93,16 @@ current folder and print the loaded results to the terminal.
 
 To run the text-based interface, use:
     python interface.py
+New UI Features: Test Button & Goal Button
+Two key interactive buttons have been implemented in the text-based interface to enhance usability and functionality:
+  1. Test Button
+    The Test Button allows users to quickly validate the core functionality of the application without manual data entry.
+    When selected, it auto-generates sample transactions and budget rules using the test data generator.
+    Verifies that data loading, saving, and budget calculations work correctly.
+    Helps users confirm the system is functioning as expected before entering real personal finance data.
+  2. Goal Button
+    The Goal Button provides access to the savings goal management module.
+    View current savings progress toward a financial target.
+    Add new savings deposits and update the saved amount.
+    Check goal completion percentage and remaining amount needed.
+    Interacts with savings.csv and target.csv to store and retrieve goal data.
