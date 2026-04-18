@@ -100,14 +100,14 @@ To run the text-based interface, use:
 
 Two key interactive buttons have been implemented in the text-based interface to enhance usability and functionality:
 
-# 1. Test Button
+### 1. Test Button
 
    The Test Button allows users to quickly validate the core functionality of the application without manual data entry.
    When selected, it auto-generates sample transactions and budget rules using the test data generator.
    Verifies that data loading, saving, and budget calculations work correctly.
    Helps users confirm the system is functioning as expected before entering real personal finance data.
 
-# 2. Goal Button
+### 2. Goal Button
 
    The Goal Button provides access to the savings goal management module.
    View current savings progress toward a financial target.
