@@ -75,7 +75,7 @@ Used by Goal class to calculate progress percentage.
 Content example (one line only):
 10000.0
 
-**Features Implemented in datamodels.py**
+## Features Implemented in datamodels.py
 * Data models: Transaction, BudgetRule, Goal, GoalRecord
 * Save/load transactions to/from transactions.csv with validation
 * Save/load budget rules to/from budget_rules.csv with validation
