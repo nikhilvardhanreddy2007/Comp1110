@@ -86,23 +86,31 @@ Content example (one line only):
 
 ## Running the Tests
 To test the data model and file I/O independently, run:
+
     python datamodels.py
 
 This will create sample transactions.csv and budget_rules.csv files in your
 current folder and print the loaded results to the terminal.
 
 To run the text-based interface, use:
+
     python interface.py
-New UI Features: Test Button & Goal Button
+
+## New UI Features: Test Button & Goal Button
+
 Two key interactive buttons have been implemented in the text-based interface to enhance usability and functionality:
-  1. Test Button
-    The Test Button allows users to quickly validate the core functionality of the application without manual data entry.
-    When selected, it auto-generates sample transactions and budget rules using the test data generator.
-    Verifies that data loading, saving, and budget calculations work correctly.
-    Helps users confirm the system is functioning as expected before entering real personal finance data.
-  2. Goal Button
-    The Goal Button provides access to the savings goal management module.
-    View current savings progress toward a financial target.
-    Add new savings deposits and update the saved amount.
-    Check goal completion percentage and remaining amount needed.
-    Interacts with savings.csv and target.csv to store and retrieve goal data.
+
+1. Test Button
+
+   The Test Button allows users to quickly validate the core functionality of the application without manual data entry.
+   When selected, it auto-generates sample transactions and budget rules using the test data generator.
+   Verifies that data loading, saving, and budget calculations work correctly.
+   Helps users confirm the system is functioning as expected before entering real personal finance data.
+
+2. Goal Button
+
+   The Goal Button provides access to the savings goal management module.
+   View current savings progress toward a financial target.
+   Add new savings deposits and update the saved amount.
+   Check goal completion percentage and remaining amount needed.
+   Interacts with savings.csv and target.csv to store and retrieve goal data.
