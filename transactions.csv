@@ -1,13 +1,4 @@
 date,amount,category,description,notes
-2026-04-19,6567.0,Rental,Monthly Apartment Rent,Fixed major expense
-2026-04-19,961.0,Entertainment,Generated Entertainment expense,Auto-generated test data
-2026-04-17,59.0,Transport,Generated Transport expense,Auto-generated test data
-2026-04-15,200.0,Food,Generated Food expense,Auto-generated test data
-2026-04-15,1257.0,Entertainment,Generated Entertainment expense,Auto-generated test data
-2026-04-15,93.0,Utilities,Generated Utilities expense,Auto-generated test data
-2026-04-15,108.0,Utilities,Generated Utilities expense,Auto-generated test data
-2026-04-15,1117.0,Entertainment,Generated Entertainment expense,Auto-generated test data
-2026-04-14,312.0,Entertainment,Generated Entertainment expense,Auto-generated test data
-2026-04-14,197.0,Subscriptions,Generated Subscriptions expense,Auto-generated test data
-2026-04-14,1448.0,Entertainment,Generated Entertainment expense,Auto-generated test data
-2026-04-12,18.0,Transport,Generated Transport expense,Auto-generated test data
+2024-06-01,150.0,Food,Groceries at supermarket,Bought fruits and vegetables
+2024-06-02,50.0,Transport,Taxi ride home,
+2024-06-03,200.0,Entertainment,Concert tickets,Went to see a band live
