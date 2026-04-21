@@ -2,7 +2,7 @@
 COMP1110 Group Project — Semester 2, 2025-2026
 
 ## What is this?
-Drawing from our analysis of existing market tools, we hope to develop a refined version that focus on three core factors: privacy, accessibility, and personalization. We use manual data entry to ensure a more secure environment. 
+Drawing from our analysis of existing market tools, we hope to develop a refined version that focus on three core factors: privacy, accessibility, and personalization. We use manual entry to ensure a more secure environment. 
 Our text-based assistant allows users to log spending, set category limits, and receive overspending alerts within a clean, user-friendly interface.
 
 ## How to run
