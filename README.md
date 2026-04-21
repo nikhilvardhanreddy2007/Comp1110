@@ -2,8 +2,8 @@
 COMP1110 Group Project — Semester 2, 2025-2026
 
 ## What is this?
-A text-based personal budget assistant that lets users log their spending,
-set budget limits per category, and get alerts when they are overspending.
+Drawing from our analysis of existing market tools, we hope to develop a refined version that centers on three core factors: privacy, accessibility, and personalization. We use manual data entry to ensure a more secure environment. 
+Our text-based assistant allows users to log spending, set category limits, and receive overspending alerts within a clean, user-friendly interface.
 
 ## How to run
 Make sure you have Python 3 installed, then run:
