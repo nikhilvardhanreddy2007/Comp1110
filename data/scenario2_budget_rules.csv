@@ -1,0 +1,6 @@
+category,limit_amount,period,alert
+Subscriptions,500.00,monthly,exceed
+Subscriptions,400.00,monthly,warn
+Subscriptions,150.00,weekly,velocity
+All,5000.00,monthly,warn
+All,6000.00,monthly,exceed

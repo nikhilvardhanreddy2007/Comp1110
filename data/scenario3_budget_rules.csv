@@ -1,0 +1,7 @@
+category,limit_amount,period,alert
+Health,500.00,monthly,exceed
+Health,400.00,monthly,warn
+Health,200.00,monthly,velocity
+Food,2000.00,monthly,warn
+Transport,600.00,monthly,warn
+All,8000.00,monthly,warn

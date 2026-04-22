@@ -1,0 +1,22 @@
+date,amount,category,description,notes
+2026-04-01,85.00,Food,Weekly groceries,Normal week
+2026-04-01,42.00,Transport,MTR monthly pass top up,Commute
+2026-04-02,38.00,Food,Canteen lunch x3,Work lunches
+2026-04-03,55.00,Entertainment,Cinema and dinner,Weekend
+2026-04-04,22.00,Food,Supermarket top up,Household
+2026-04-05,30.00,Transport,Taxi home,Late night
+2026-04-06,90.00,Food,Weekly groceries,Normal week
+2026-04-07,18.00,Food,Canteen lunch,Work
+2026-04-08,25.00,Health,Routine pharmacy vitamins,Monthly vitamins
+2026-04-10,35.00,Food,Canteen lunch week 2,Work
+2026-04-12,60.00,Food,Weekend groceries,Normal
+2026-04-14,28.00,Food,Canteen lunch,Work
+2026-04-15,32.00,Transport,Taxi to appointment,Medical
+2026-04-16,40.00,Food,Canteen lunch week 3,Work
+2026-04-18,750.00,Health,Emergency dental treatment,Cracked tooth urgent
+2026-04-18,220.00,Health,Prescribed medication course,From dentist
+2026-04-19,180.00,Health,Private clinic consultation,Same day appointment
+2026-04-19,95.00,Health,Follow up xray at radiology,Dental referral
+2026-04-20,340.00,Health,Specialist consultation fee,Referred by dentist
+2026-04-20,65.00,Health,Pharmacy painkillers and antibiotics,Prescription
+2026-04-21,40.00,Food,Soft food groceries post dental,Recovery diet

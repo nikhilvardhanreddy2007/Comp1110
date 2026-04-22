@@ -1,0 +1,4 @@
+category,limit_amount,period,alert
+Food,50.00,daily,exceed
+Food,600.00,monthly,warn
+Food,650.00,monthly,exceed

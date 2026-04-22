@@ -1,0 +1,9 @@
+category,limit_amount,period,alert
+Food,800.00,monthly,warn
+Food,1000.00,monthly,exceed
+Shopping,500.00,monthly,warn
+Shopping,700.00,monthly,exceed
+Entertainment,400.00,monthly,warn
+Entertainment,550.00,monthly,exceed
+All,8000.00,monthly,warn
+All,9500.00,monthly,exceed
