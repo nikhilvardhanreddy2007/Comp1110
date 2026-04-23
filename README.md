@@ -19,6 +19,7 @@ python interface.py
 |-----------------------------|----------------------------|--------------------------------------------------|
 | datamodels.py               | Ekaterina Anufrieva         | Data models and file I/O                         |
 | interface.py                | Insung Cho                  | Text-based interface and UI flow                 |
+| summary_statictics.py       | Insung Cho                  | Summary statistics and category spending graph   |
 | testdatagenerator.py        | Hongyi Wang                 | Test Data Generator                              |
 | data/                       | Yaratha Nikhil Vardhan Reddy| Case study transaction, rules and budget files   |
 | (more files TBA as groupmates complete their parts)                                                  |

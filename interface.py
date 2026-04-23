@@ -3,6 +3,7 @@ from datetime import date, datetime, timedelta
 
 import testdatagenerator
 import datamodels
+from summary_statictics import SummaryStatisticsScreen
 from textual.app import App, ComposeResult
 from textual.containers import Horizontal, Vertical
 from textual.screen import ModalScreen, Screen
@@ -166,44 +167,6 @@ def get_period_range(period, today):
 
     return today.replace(month=1, day=1), today.replace(month=12, day=31)
 
-
-def build_summary_report(transactions, category_filter):
-    if not transactions:
-        return "No transactions found."
-
-    total_spent = sum(transaction.amount for transaction in transactions)
-    largest_transaction = max(transactions, key=lambda transaction: transaction.amount)
-    totals_by_category = {}
-    totals_by_month = {}
-
-    for transaction in transactions:
-        totals_by_category[transaction.category] = (
-            totals_by_category.get(transaction.category, 0.0) + transaction.amount
-        )
-        totals_by_month[transaction.date[:7]] = (
-            totals_by_month.get(transaction.date[:7], 0.0) + transaction.amount
-        )
-
-    lines = [
-        f"Category: {category_filter}",
-        f"Transactions: {len(transactions)}",
-        f"Total spent: HKD {total_spent:.2f}",
-        f"Average: HKD {total_spent / len(transactions):.2f}",
-        f"Largest: {largest_transaction.date} | {largest_transaction.category} | HKD {largest_transaction.amount:.2f}",
-        "",
-        "By category",
-    ]
-    lines.extend(
-        f"- {category_name}: HKD {amount:.2f}"
-        for category_name, amount in sorted(totals_by_category.items())
-    )
-    lines.extend(["", "By month"])
-    lines.extend(
-        f"- {month}: HKD {amount:.2f}"
-        for month, amount in sorted(totals_by_month.items())
-    )
-
-    return "\n".join(lines)
 
 def check_budget_velocity(transactions, rule):
     period_to_days = {
@@ -841,13 +804,11 @@ class BudgetApp(App):
 
     def action_summary(self):
         self.push_screen(
-            ReportScreen(
-                "Summary",
-                build_summary_report(
-                    self.visible_transactions, self.current_category_filter()
-                ),
+            SummaryStatisticsScreen(
+                self.visible_transactions, self.current_category_filter()
             )
         )
+
     def action_test(self):
         testdatagenerator.test_data_generator(12)
         testdatagenerator.budget_rules_generator(5)
