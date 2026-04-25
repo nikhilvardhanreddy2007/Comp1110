@@ -17,6 +17,7 @@ python interface.py
 ## File Overview
 | File                        | Author                      | Purpose                                          |
 |-----------------------------|----------------------------|--------------------------------------------------|
+| research.txt                | Hayley Ip                   | Survey of Budgeting Tools and Comparison of Tools|
 | datamodels.py               | Ekaterina Anufrieva         | Data models and file I/O                         |
 | interface.py                | Insung Cho                  | Text-based interface and UI flow                 |
 | summary_statictics.py       | Insung Cho                  | Summary statistics and category spending graph   |
