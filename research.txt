@@ -1,4 +1,4 @@
-Survey of Budgeting Tools
+**Survey of Budgeting Tools**
 
 1.YNAB (You Need A Budget)
 YNAB is a well-known personal budgeting application using a zero-based budgeting system, which means every dollar of income is assigned to a purpose of use. YNAB supports bank syncing, detailed spending reports, and goal tracking. This increases convenience and helps users stay on track. However, it requires a paid subscription for $14.99/month or $109/year. This application also assumes users are willing to manage their finances actively and frequently, which may not be suitable for a casual user.
@@ -19,10 +19,14 @@ Goodbudget allocates funds into virtual categories called envelopes, users can a
 Google Sheets or Excel are the most flexible tools, users can design their own budgeting systems. They have full control over categories, formulas, and analysis. On the other hand, this method requires a good technical knowledge to set up, and much more effort on the manual data entry.
 
 Comparison of Tools
-
-| Tool                   | Data Entry      | Category Flexibility  | Alerts  | Ease of Use  | Data storage  |Privacy|
-|-----------------------------|----------------------------|--------------------------------------------------|
-| YNAB |Manual + Automatic |High |Strong |Medium |cloud |Medium|
+| Tool | Data Entry | Category Flexibility | Alerts | Ease of Use | Data storage | Privacy |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **YNAB** | Manual + Automatic | High | Strong | Medium | cloud | Medium |
+| **Splitwise** | Manual | Low | None | Easy | cloud | High |
+| **Mint** | Automatic | Medium | Strong | Easy | Local devices + cloud | Low |
+| **PocketGuard** | Automatic | Low | Basic | Very Easy | 256-bit SSL encryption | Low |
+| **Goodbudget** | Manual + Automatic (premium plan) | Medium | Basic | Medium | 256-bit SSL encryption | High |
+| **Excel/Sheets** | Manual | Very High | None | Hard | Local devices | Very High |
 
 
 
