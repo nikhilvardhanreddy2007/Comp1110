@@ -1,6 +1,6 @@
 ## Survey of Budgeting Tools
 
-** 1.YNAB (You Need A Budget) **
+### 1.YNAB (You Need A Budget) 
 YNAB is a well-known personal budgeting application using a zero-based budgeting system, which means every dollar of income is assigned to a purpose of use. YNAB supports bank syncing, detailed spending reports, and goal tracking. This increases convenience and helps users stay on track. However, it requires a paid subscription for $14.99/month or $109/year. This application also assumes users are willing to manage their finances actively and frequently, which may not be suitable for a casual user.
 
 2.Splitwise
