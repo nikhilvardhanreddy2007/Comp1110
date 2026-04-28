@@ -1,3 +1,6 @@
+# Summary Statistics 
+# Developed by: Insung Cho
+
 from statistics import median
 
 from textual.app import ComposeResult
