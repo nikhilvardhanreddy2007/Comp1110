@@ -3,6 +3,7 @@
 
 import os
 from datetime import date, datetime, timedelta
+from typing import Optional
 
 import testdatagenerator
 import datamodels
@@ -294,7 +295,7 @@ class ConfirmScreen(ModalScreen[bool]):
         self.dismiss(event.button.id == "yes")
 
 
-class FormScreen(ModalScreen[object | None]):
+class FormScreen(ModalScreen[Optional[object]]):
     BINDINGS = [("escape", "close", "Cancel")]
     CSS = MODAL_CSS
 
@@ -546,7 +547,7 @@ class GoalScreen(ModalScreen):
             self.update_ui()
 
 
-class BudgetScreen(ModalScreen[list[BudgetRule] | None]):
+class BudgetScreen(ModalScreen[Optional[list[BudgetRule]]]):
     BINDINGS = [
         ("a", "add", "Add"),
         ("x", "delete", "Delete"),
